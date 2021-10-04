@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+        <record id="customerP_tree" model="ir.ui.view">
+        <field name="name">account.customer.tree</field>
+        <field name="model">account.report</field>
+        <field name="arch" type="xml">
+            <tree string="Customer">
+                <field name="customer_name"/>
+                <field name="customer_age"/>
+                <field name="customer_totalAmount"/>
+<!--                <field name="customer_name"/>-->
+<!--                <field name="customer_name"/>-->
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="customerP_form" model="ir.ui.view">
+        <field name="name">account.customer.form</field>
+        <field name="model">account.report</field>
+        <field name="arch" type="xml">
+            <form string="Customer">
+                <group>
+                    <group>
+                    <field name="customer_name"/>
+                    </group>
+                    <group>
+                    <field name="customer_age"/>
+                    </group>
+                </group>
+                <group>
+                <field name="customer_totalAmount"/>
+                <field name="customer_address"/>
+                <field name="customer_picture"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_report" model="ir.actions.act_window">
+            <field name="name">Customer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.report</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create first account report!
+              </p>
+            </field>
+    </record>
+
+
+    <menuitem id="account_root" name="Account Report" sequence="0" web_icon="custom/accounting_pdf_reports/static/description/icon.png"/>
+    <menuitem id="account_customer" name="Customer" parent="account_root" action="action_report"/>
+</odoo>
