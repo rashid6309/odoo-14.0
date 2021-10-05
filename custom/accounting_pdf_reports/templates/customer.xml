@@ -3,8 +3,8 @@
 
 
         <record id="customerP_tree" model="ir.ui.view">
-        <field name="name">account.customer.tree</field>
-        <field name="model">account.report</field>
+        <field name="name">customer.data.tree</field>
+        <field name="model">customer.data</field>
         <field name="arch" type="xml">
             <tree string="Customer">
                 <field name="customer_name"/>
@@ -18,8 +18,8 @@
 
 
     <record id="customerP_form" model="ir.ui.view">
-        <field name="name">account.customer.form</field>
-        <field name="model">account.report</field>
+        <field name="name">customer.data.form</field>
+        <field name="model">customer.data</field>
         <field name="arch" type="xml">
             <form string="Customer">
                 <group>
@@ -39,10 +39,10 @@
         </field>
     </record>
 
-    <record id="action_report" model="ir.actions.act_window">
+    <record id="action_data" model="ir.actions.act_window">
             <field name="name">Customer</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">account.report</field>
+            <field name="res_model">customer.data</field>
             <field name="view_mode">tree,kanban,form</field>
             <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face">
@@ -52,6 +52,6 @@
     </record>
 
 
-    <menuitem id="account_root" name="Account Report" sequence="0" web_icon="custom/accounting_pdf_reports/static/description/icon.png"/>
-    <menuitem id="account_customer" name="Customer" parent="account_root" action="action_report"/>
+    <menuitem id="data_root" name="Customer Data" sequence="99" web_icon="custom/accounting_pdf_reports/static/description/icon.png"/>
+    <menuitem id="customer_data" name="Customer" parent="data_root" action="action_data"/>
 </odoo>
