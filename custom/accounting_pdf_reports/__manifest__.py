@@ -11,12 +11,16 @@
     'website': 'https://www.odoo.com/page/billing',
     'images': ['images/accounts.jpeg', 'images/bank_statement.jpeg', 'images/cash_register.jpeg',
                'images/chart_of_accounts.jpeg', 'images/customer_invoice.jpeg', 'images/journal_entries.jpeg'],
-    'depends': ['base_setup', 'product', 'analytic', 'portal', 'digest'],
+
+    'depends': ['base_setup', 'product', 'analytic', 'portal', 'digest', 'sales_report'],
+
     'data': [
-        'templates/customer.xml','security/ir.model.access.csv'
+        'templates/customer.xml',
+        'security/ir.model.access.csv'
     ],
     'installable': True,
     'application': True,
     'auto_install': False,
     'license': 'LGPL-3',
 }
+

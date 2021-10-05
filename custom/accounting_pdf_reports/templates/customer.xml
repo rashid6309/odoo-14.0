@@ -35,7 +35,13 @@
                 <field name="customer_address"/>
                 <field name="customer_picture"/>
                 </group>
+                <field name="sales_reports_lines_ids">
+<!--                    <tree>-->
+<!--                        <field name="sales_date"/>-->
+<!--                    </tree>-->
+                </field>
             </form>
+
         </field>
     </record>
 

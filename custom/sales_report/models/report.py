@@ -10,3 +10,4 @@ class SalesReport(models.Model):
     total_commission = fields.Char(string="Commission", require=True)
     sales_code = fields.Char(string="Code", require=True)
     sales_date = fields.Date(string="Date")
+    customer_id = fields.Many2one('customer.data', string="Customer")
