@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_customer_record,access.customer.record,model_customer_record,1,1,1,1
+access_destination_package,access.destination.package,model_destination_package,,1,1,1,1

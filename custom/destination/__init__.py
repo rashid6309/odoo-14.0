@@ -1,1 +1,1 @@
-from .models import record
+from .models import destination

@@ -2,59 +2,56 @@
 <odoo>
 
 
-        <record id="record_tree" model="ir.ui.view">
-        <field name="name">customer.record.tree</field>
-        <field name="model">customer.record</field>
+        <record id="destination_tree" model="ir.ui.view">
+        <field name="name">destination.package.tree</field>
+        <field name="model">destination.package</field>
         <field name="arch" type="xml">
-            <tree string="Customer">
-                <field name="customer_name"/>
-                <field name="customer_age"/>
-                <field name="customer_contact"/>
-                <field name="customer_email"/>
-                <field name="customer_address"/>
-<!--                <field name="customer_name"/>-->
-<!--                <field name="customer_name"/>-->
+            <tree string="Destination">
+                <field name="package_name"/>
+                <field name="package_days"/>
+                <field name="city"/>
+                <field name="package_details"/>
+                <field name="contact_details"/>
             </tree>
         </field>
     </record>
 
 
-    <record id="record_form" model="ir.ui.view">
-        <field name="name">customer.record.form</field>
-        <field name="model">customer.record</field>
+    <record id="destination_form" model="ir.ui.view">
+        <field name="name">contact_details.form</field>
+        <field name="model">destination.package</field>
         <field name="arch" type="xml">
-            <form string="Customer">
+            <form string="Destination">
                 <group>
                     <group>
-                    <field name="customer_name"/>
+                    <field name="package_name"/>
                     </group>
                     <group>
-                    <field name="customer_age"/>
-                    <field name="customer_email"/>
+                    <field name="package_days"/>
+                    <field name="city"/>
                     </group>
                 </group>
                 <group>
-                <field name="customer_contact"/>
-                <field name="customer_address"/>
-                <field name="customer_picture"/>
+                <field name="package_details"/>
+                <field name="contact_details"/>
                 </group>
             </form>
         </field>
     </record>
 
-    <record id="action_record" model="ir.actions.act_window">
-            <field name="name">Record</field>
+    <record id="action_destination" model="ir.actions.act_window">
+            <field name="name">Destination</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">customer.record</field>
+            <field name="res_model">destination.package</field>
             <field name="view_mode">tree,kanban,form</field>
             <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face">
-                Create first customer record!
+                Create first destination record!
               </p>
             </field>
     </record>
 
 
-    <menuitem id="record_root" name="Customer Record" sequence="1" web_icon="custom/customer_record/static/description/icon.png"/>
-    <menuitem id="customer_record" name="Record" parent="record_root" action="action_record"/>
+    <menuitem id="destination_root" name="Destination Package" sequence="3" web_icon="custom/destination/static/description/icon.png"/>
+    <menuitem id="destination_package" name="Destination" parent="destination_root" action="action_destination"/>
 </odoo>
