@@ -10,4 +10,4 @@ class Destination(models.Model):
     city = fields.Char(string="City", require=True)
     package_details = fields.Char(string="Details", require=True)
     contact_details = fields.Char(string="Contact", require=True)
-
+    customer_ids = fields.Many2many("customer.data", "Customers")
