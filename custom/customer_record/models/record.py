@@ -11,3 +11,10 @@ class CustomerRecord(models.Model):
     customer_contact = fields.Char(string="Contact", require=True)
     customer_email = fields.Char(string="Email", require=True)
     customer_picture = fields.Binary(string="Picture")
+
+
+class CustomerRecordRelation(models.Model):
+    _name = "customer.record.data"
+    _description = "Customer Record Data"
+    report_id = fields.Many2one("account.report", string="Report")
+    recordId=fields.Many2one("customer.record",string="recordID")

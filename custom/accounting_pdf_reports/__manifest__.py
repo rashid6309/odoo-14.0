@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
-    'name': 'Accounting Pdf Reports',
+    'name': 'Customer Data',
     'version': '1.1',
     'author': 'Rashid-Odoo-Master',
-    'summary': 'Accounting Pdf Reports',
+    'summary': 'Customer System Data',
     'sequence': 10,
     'description': """ this is summary description""",
     'category': 'Extra Tools',
@@ -13,7 +13,7 @@
                'images/chart_of_accounts.jpeg', 'images/customer_invoice.jpeg', 'images/journal_entries.jpeg'],
     'depends': ['base_setup', 'product', 'analytic', 'portal', 'digest'],
     'data': [
-        'templates/report.xml','security/ir.model.access.csv'
+        'templates/customer.xml','security/ir.model.access.csv'
     ],
     'installable': True,
     'application': True,

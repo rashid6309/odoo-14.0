@@ -1,9 +1,9 @@
 from odoo import models, fields
 
 
-class AccountReport(models.Model):
-    _name = "account.report"
-    _description = "Account Report"
+class CustomerData(models.Model):
+    _name = "customer.data"
+    _description = "Customer Data"
 
     customer_name = fields.Char(string="Name",require=True)
     customer_age = fields.Integer("Age")
